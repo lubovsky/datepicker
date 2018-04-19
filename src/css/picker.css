@@ -1,0 +1,183 @@
+
+
+/*
+* Third Party
+*/
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1; }
+  50% {
+    -webkit-transform: scale(1.3, 1.3);
+    opacity: 0.5; }
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1; } }
+
+.dreampicker {
+  display: none;
+  position: absolute;
+  -webkit-box-shadow: 0 0 5px 0 #222;
+          box-shadow: 0 0 5px 0 #222;
+  background: #fff;
+  border-radius: 5px;
+  z-index: 9999; }
+  .dreampicker .arrow {
+    cursor: pointer; }
+  .dreampicker._active {
+    display: block; }
+  .dreampicker .month-wrap {
+    width: 280px;
+    padding: 20px;
+    vertical-align: top; }
+  .dreampicker .week {
+    text-align: right; }
+  .dreampicker .week:last-child {
+    text-align: left; }
+  .dreampicker .daysNames {
+    margin: 10px 0; }
+  .dreampicker .dayName {
+    display: inline-block;
+    font-size: 10px;
+    width: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #007fff; }
+  .dreampicker .week .day {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 36px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+    padding: 5px 0;
+    cursor: pointer;
+    font-size: 14px; }
+  .dreampicker .week .day span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 26px; }
+  .dreampicker .week .day.null {
+    color: #adadad; }
+  .dreampicker .week .day.selected,
+  .dreampicker .week .day:hover {
+    background-color: #007fff;
+    color: #fff;
+    border-radius: 5px; }
+  .dreampicker.endDate .week .day:hover {
+    background-color: blue;
+    color: #fff; }
+  .dreampicker .week .day.selected.endDate {
+    background-color: blue;
+    color: #fff; }
+  .dreampicker .week .day.selected.startDate,
+  .dreampicker.startDate .week .day:hover,
+  .dreampicker .week .day.selected.startDate:hover {
+    background: url("../img/cal-start-date.png") top left no-repeat #f0f0f0;
+    position: relative; }
+  .dreampicker .week .day.selected.endDate,
+  .dreampicker.endDate .week .day:hover {
+    background: url("../img/cal-end-date.png") top left no-repeat #f0f0f0;
+    position: relative; }
+  .dreampicker .week .day.selected.startDate,
+  .dreampicker.startDate .week .day:hover {
+    border-radius: 5px 0 0 5px; }
+  .dreampicker .week .day.selected.endDate,
+  .dreampicker.endDate .week .day:hover {
+    border-radius: 0 5px 5px 0; }
+  .dreampicker .week .day.period,
+  .dreampicker .week .day.hovered {
+    background-color: #f0f0f0; }
+  .dreampicker .week .day.null:hover {
+    background: none;
+    color: #999; }
+  .dreampicker .week .holyday {
+    color: red;
+    text-align: center; }
+  .dreampicker .month-wrap {
+    display: none; }
+  .dreampicker .month-wrap.active {
+    display: inline-block; }
+  .dreampicker .picker_head .arrow {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer; }
+  .dreampicker .arrow.disabled {
+    display: none; }
+  .dreampicker .picker_head .titelMonth {
+    width: 100%;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+    font-size: 15px;
+    font-family: circe-bold,sans-serif; }
+  .dreampicker.dubble .month-wrap.first {
+    border-right: 1px solid #e8e8e8; }
+  .dreampicker.single .month-wrap.first .titelMonth {
+    text-align: center; }
+  .dreampicker .month-wrap.first .titelMonth {
+    text-align: right;
+    padding-right: 12px; }
+  .dreampicker .month-wrap.second .titelMonth {
+    text-align: left;
+    padding-left: 12px; }
+  .dreampicker.range-picker-wrap {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.4); }
+  ./*dreampicker:after, .dreampicker:before {
+    content: '';
+    position: absolute;
+    border-bottom: 9px solid #fff;
+    top: -8px;
+    display: block;
+    -webkit-transition: left .5s ease;
+    transition: left .5s ease; }
+  .dreampicker:before {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: absolute;
+    left: 80px; }
+  .dreampicker.rangepicker.endDate:before {
+    left: 262px; }*/
+  .dreampicker .day.today:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -3px;
+    -webkit-animation: pulsate infinite 1s;
+    animation: pulsate infinite 1s; }
+  .dreampicker .arrow {
+    position: absolute;
+    top: 20px; }
+  .dreampicker .arrow.prev {
+    left: 30px; }
+  .dreampicker .arrow.next {
+    right: 30px; }
+  .dreampicker .arrow .icon {
+    width: 28px;
+    height: 18px;
+    display: inline-block;
+    border: 1px solid #d1d1d1;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px; }
+  .dreampicker .icon-right-arrow {
+    background-image: url(../img/right-arrow.png); }
+  .dreampicker .icon-left-arrow {
+    background-image: url(../img/left-arrow.png); }
+  .dreampicker .range {
+    display: inline-block; }
+
