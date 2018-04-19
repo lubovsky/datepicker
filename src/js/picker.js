@@ -49,7 +49,7 @@
       this.range = options.range;
 
 
-      this.defaultDate = options.defaultDate;
+      this.defaultDate = true;
 
       this.target = '';
 

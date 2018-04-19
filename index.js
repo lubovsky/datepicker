@@ -15,8 +15,7 @@ var rangePicker = new Dreampicker('#date_range',
                         day : 0
                       },
                       outputMonth : 2,
-                      range: true,
-                      defaultDate :true
+                      range: true
                     }
        );
 
@@ -34,8 +33,7 @@ var simplePicker = new Dreampicker('#simple_date',
                         day : 0
                       },
                       outputMonth : 1,
-                      range: false,
-                      defaultDate :true
+                      range: false
                     }
        );
 
@@ -53,8 +51,7 @@ var simplePicker2 = new Dreampicker('#simple_date2',
                         day : 0
                       },
                       outputMonth : 1,
-                      range: false,
-                      defaultDate :true
+                      range: false
                     }
        );
 
