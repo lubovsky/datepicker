@@ -69,7 +69,7 @@ Construction for no range picker
 
 #Options
 
-minDate - The minimum date from the range
-maxDate - The max date from the range
-outputMonth - Maximum month in calendar wrap (3 мax)
+minDate - The minimum date from the range<br>
+maxDate - The max date from the range<br>
+outputMonth - Maximum month in calendar wrap (3 мax)<br>
 range - range or single date (true/false)
